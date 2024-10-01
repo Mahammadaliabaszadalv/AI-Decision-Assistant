@@ -286,20 +286,17 @@ knowledge = And(rule1, rule2, rule3)
 query_wfh = WFH
 query_drive = Drive
 query_public_transport = PublicTransport
-
 # Scenario 1: It's raining and there's heavy traffic.
 model1 = {"Rain": True, "HeavyTraffic": True, "EarlyMeeting": False, "Strike": False}
 print("Scenario 1 - Work from home:", model_check(knowledge, query_wfh))
 print("Scenario 1 - Drive:", model_check(knowledge, query_drive))
 print("Scenario 1 - Take public transport:", model_check(knowledge, query_public_transport))
-
 # Scenario 2: There's a public transport strike, and it's not raining.
 model2 = {"Rain": False, "HeavyTraffic": False, "EarlyMeeting": False, "Strike": True}
 print("Scenario 2 - Work from home:", model_check(knowledge, query_wfh))
 print("Scenario 2 - Drive:", model_check(knowledge, query_drive))
 print("Scenario 2 - Take public transport:", model_check(knowledge, query_public_transport))
-
-# Scenario 3: No rain, light traffic, and no strike.
+# Scenario 3: No rain,light traffic, and no strike.
 model3 = {"Rain": False, "HeavyTraffic": False, "EarlyMeeting": False, "Strike": False}
 print("Scenario 3 - Work from home:", model_check(knowledge, query_wfh))
 print("Scenario 3 - Drive:", model_check(knowledge, query_drive))
